@@ -14,19 +14,23 @@ export const ExemploUseEffect = () => {
 
 
   return (
-    <div className='flex space-x-4  p-4'>
+    <div className=' flex items-center justify-center  '>
+        <div className='p-4 '>
         <input
-        className='  rounded-full p-2 cursor-pointer '
+        className=' border font-bold border-gray-600 rounded-full p-2 cursor-pointer '
         type="text"
         value={value}
         onChange={(e)=> setValue(e.target.value)}
         />
+        </div>
+        <div>
         <input
-        className='cursor-pointer'
+        className='cursor-pointer  '
         type='checkbox'
         value={checked}
         onChange={(e)=> setChecked(e.target.checked)}
         />
+        </div>
 
         
     </div>

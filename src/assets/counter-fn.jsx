@@ -9,8 +9,11 @@ export const Counter_Fn = () => {
       setValorAtual(prevCount => {
         setminhaString("Ana Lucia tem contagem " + prevCount );
         return prevCount +1
-      });
-    
+      });    
+    }
+
+    const decrement = () => {
+      setValorAtual(prevCount =>prevCount - 1)
     }
   
 
@@ -20,11 +23,17 @@ export const Counter_Fn = () => {
       <h2 > Contador usando useState</h2>
       <p>Contagem :  {valorAtual}</p>
       <p>nome;  {minhaString}</p>
-      <button className= "bg-sky-500/75" onClick={increment}>Adicionar</button>
+      <div>
+      <button className= "font-bold bg-sky-500 hover:bg-sky-700 border border-gray-600 rounded-full p-2" onClick={increment}  >Adicionar</button>
+      </div>
+      <div className='
+       p-2'>
+      <button className= "font-bold bg-sky-500 hover:bg-sky-700 border border-gray-600 rounded-full p-2 " onClick={decrement}>decrementar</button>
+      </div>
     </div>
 
 
-    <ExemploUseEffect/>
+    
     </>
   )
 }
